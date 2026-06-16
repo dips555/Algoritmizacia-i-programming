@@ -1,0 +1,11 @@
+ip = input().split('.')
+
+if len(ip) == 4:
+    ok = True
+    for part in ip:
+        if not part.isdigit() or not (0 <= int(part) <= 255):
+            ok = False
+            break
+    print('ДА' if ok else 'НЕТ')
+else:
+    print('НЕТ')
