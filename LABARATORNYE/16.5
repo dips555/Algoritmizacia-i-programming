@@ -1,0 +1,14 @@
+s1 = set(input("Введите IP адрес: ").split())
+s2 = set(input("Введите IP адрес: ").split())
+s3 = set(input("Введите IP адрес: ").split())
+
+all_ips = s1 | s2 | s3
+
+result = []
+
+for ip in all_ips:
+    cnt = (ip in s1) + (ip in s2) + (ip in s3)
+    if cnt <= 2:
+        result.append(ip)
+
+print(result)
