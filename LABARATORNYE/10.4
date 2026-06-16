@@ -1,0 +1,14 @@
+total = 0
+
+while True:
+    price = int(input("Введите цену товара: "))
+
+    if price == 0:
+        break
+
+    total += price
+
+if total > 1000:
+    total *= 0.9
+
+print("Итоговая сумма к оплате:", total)
