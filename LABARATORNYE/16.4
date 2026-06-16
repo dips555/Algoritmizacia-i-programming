@@ -1,0 +1,7 @@
+cia = set(input("введите имя агента: ").split())
+mi6 = set(input("введите имя агента: ").split())
+kgb = set(input("введите имя агента: ").split())
+
+agents = sorted((cia & mi6) - kgb, reverse=True)
+
+print(*agents)
