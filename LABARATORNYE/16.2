@@ -1,0 +1,9 @@
+allowed = set(map(int, "10 20 30".split()))
+incoming = map(int, "20 40 10 50".split())
+
+for id_ in incoming:
+    if id_ in allowed:
+        print("OK")
+    else:
+        print("ADDED")
+        allowed.add(id_)
