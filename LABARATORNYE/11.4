@@ -1,0 +1,40 @@
+n = int(input("Введите число н: "))
+
+last_digit = n % 10
+
+count_3 = 0
+count_last = 0
+count_even = 0
+sum_bolshe_5 = 0
+prod_bolsh_7 = 1
+count_05 = 0
+
+while n > 0:
+    digit = n % 10
+
+    if digit == 3:
+        count_3 += 1
+
+    if digit == last_digit:
+        count_last += 1
+
+    if digit % 2 == 0:
+        count_even += 1
+
+    if digit > 5:
+        sum_bolshe_5 += digit
+
+    if digit > 7:
+        prod_bolsh_7 *= digit
+
+    if digit == 0 or digit == 5:
+        count_05 += 1
+
+    n //= 10
+
+print(count_3)
+print(count_last)
+print(count_even)
+print(sum_bolshe_5)
+print(prod_bolsh_7)
+print(count_05)
