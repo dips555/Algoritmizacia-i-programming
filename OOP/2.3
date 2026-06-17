@@ -4,10 +4,12 @@ class Monster:
         self.power = power
         self.hp = hp
         print(f"Было здоровья: {self.hp}")
+        print(f"Было силы: {self.dmg}")
 
     def rest(self):
         print(f"{self.name} отдыхает в склепе! Здоровье востановленно!")
         print(f"❤️:{self.hp + 10}")
+        print(f"Сила увеличена:{self.power + 5}")
 
 
 m = Monster("Валера", 100, 100)
