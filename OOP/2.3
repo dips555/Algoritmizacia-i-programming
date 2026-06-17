@@ -1,0 +1,14 @@
+class Monster:
+    def __init__(self, name, power, hp):
+        self.name = name
+        self.power = power
+        self.hp = hp
+        print(f"Было здоровья: {self.hp}")
+
+    def rest(self):
+        print(f"{self.name} отдыхает в склепе! Здоровье востановленно!")
+        print(f"❤️:{self.hp + 10}")
+
+
+m = Monster("Валера", 100, 100)
+m.rest()
