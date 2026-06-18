@@ -1,0 +1,28 @@
+class Wherewolf:
+    def __init__(self, name, form, power ):
+        self.__name = name
+        self.__form = form
+        self.__power = power
+
+    def get_stats(self):
+        return f"Имя: {self.__name}, Сейчас в форме {self.__form}, сила {self.__power}"
+
+    def transform(self):
+        if self.__form == "человек":
+            print(f"{self.__name} обрастает шерстью!")
+            self.__form = "Волк"
+            self.__power = 45
+
+        else:
+            print(f"{self.__name} становится человеком")
+            self.__form = "человек"
+            self.__power = 15
+
+
+men = Wherewolf("Люкан", "человек", 15)
+
+print(men.get_stats())
+men.transform()
+print(men.get_stats())
+men.transform()
+print(men.get_stats())
